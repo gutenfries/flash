@@ -1,0 +1,23 @@
+[package]
+name = "flash"
+version = "0.1.0"
+edition = "2021"
+authors = ["marc gutenberger <gutenfries@gmail.com>"]
+license = "GPL-3.0-or-later"
+repository = "https://github.com/gutenfries/flash"
+
+[[bin]]
+name = "flash"
+path = "src/main.rs"
+
+[profile.release]
+codegen-units = 1
+incremental = true
+lto = true
+opt-level = "z"
+
+[profile.dev]
+codegen-units = 256
+incremental = true
+lto = true
+# opt-level = "z"
