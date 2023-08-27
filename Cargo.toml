@@ -20,4 +20,9 @@ opt-level = "z"
 codegen-units = 256
 incremental = true
 lto = true
-# opt-level = "z"
+
+[dependencies]
+phf = { version = "0.11.2", features = ["macros"] }
+
+[build-dependencies]
+cc = "1.0.83"
